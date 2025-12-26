@@ -1,9 +1,8 @@
 #!/bin/bash
 set -x
 
-MODEL_DIR="/home/xiandong/LlamaGen/saved_model_cub200_single_gpu/result-GPT-B"
+MODEL_DIR="/home/xiandong/Test_llamagen/saved_model_cub200_single_gpu/20251226134614-GPT-B"
 
-# 遍历MODEL_DIR下的所有子目录
 for checkpoint_dir in "$MODEL_DIR"/*/ ; do
     if [ -f "${checkpoint_dir}/consolidated.pth" ]; then
         echo "Processing checkpoint: ${checkpoint_dir}consolidated.pth"

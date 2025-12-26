@@ -6,3 +6,7 @@ __pycache__/
 *.pyc
 Datasets/
 pretrained_models/
+*.DS_Store
+/saved_model_cub200_single_gpu
+/cub200_code_c2i_flip_ten_crop
+/results
