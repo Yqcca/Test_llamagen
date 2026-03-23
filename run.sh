@@ -21,6 +21,7 @@ bash scripts/autoregressive/train_c2i_fsdp.sh \
 --image_size 384 \
 --gpt_model GPT-B \
 --num_classes 200 \
+--no_wandb \
 --epochs 300
 
 # Modify the model path in sample_c2i_class_each_model.sh according to cloud_save_path
