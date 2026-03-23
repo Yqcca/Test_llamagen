@@ -1,4 +1,3 @@
-# 切换到项目根目录
 cd "$(dirname "$0")/../.."  
 PROJECT_ROOT=/home/xiandong/Test_llamagen # Modify the project root path
 cd $PROJECT_ROOT
