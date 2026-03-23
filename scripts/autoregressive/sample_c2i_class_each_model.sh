@@ -17,6 +17,7 @@ for checkpoint_dir in "$MODEL_DIR"/*/ ; do
         --gpt_model GPT-B \
         --image_size 384 \
         --cfg_scale 1.2 \
+        --cls_token_num 1 \
         --from_fsdp
     fi
 done

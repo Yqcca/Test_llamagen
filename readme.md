@@ -4,22 +4,7 @@
 
 1. First, ensure you have Conda installed on your system. If not, please install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/distribution).
 
-2. Create and activate the conda environment using the provided `environment.yml` file:
-
-```bash
-conda env create -f environment.yml
-conda activate llamagen
-```
-If you want to install the environment in a specific directory, you can use the following command:
-```bash
-conda env create -f environment.yml -p /path/to/your/env
-```
-If you meet several errors, you need try to install the certain package in the environment.yml file.
-
-
-## Environment Configuration
-
-The `environment.yml` file specifies all required dependencies. Below is an example:
+2. The `environment.yml` file specifies all required dependencies. Below is an example:
 
 ```yaml
 name: llamagen
@@ -34,6 +19,19 @@ dependencies:
     - transformers
     ...
 ```
+
+3. Create and activate the conda environment using the provided `environment.yml` file:
+
+```bash
+conda env create -f environment.yml
+conda activate llamagen
+```
+If you want to install the environment in a specific directory, you can use the following command:
+```bash
+conda env create -f environment.yml -p /path/to/your/env
+```
+If you meet several errors, you need try to install the certain package in the environment.yml file.
+
 
 ## Prerequisite
 1. Download the CUB dataset and place it in the directory `Test_llamagen/Datasets`:
