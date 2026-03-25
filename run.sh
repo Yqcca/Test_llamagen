@@ -23,6 +23,7 @@ bash scripts/autoregressive/train_c2i_fsdp.sh \
 --image_size 384 \
 --gpt_model GPT-B \
 --num_classes 200 \
+--ckpt_every 1000 \
 --no_wandb \
 --epochs 300
 
