@@ -7,6 +7,8 @@ export PYTHONPATH=$PROJECT_ROOT:$PYTHONPATH
 echo "Current directory: $(pwd)"
 echo "PYTHONPATH: $PYTHONPATH"
 
+conda activate llamagen
+
 # Preprocess the dataset
 python data.py
 
