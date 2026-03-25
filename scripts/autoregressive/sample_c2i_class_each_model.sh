@@ -7,7 +7,7 @@ for checkpoint_dir in "$MODEL_DIR"/*/ ; do
     if [ -f "${checkpoint_dir}/consolidated.pth" ]; then
         echo "Processing checkpoint: ${checkpoint_dir}consolidated.pth"
         
-        CUDA_VISIBLE_DEVICES=0 torchrun \
+        CUDA_VISIBLE_DEVICES=7 torchrun \
         --nnodes=1 --nproc_per_node=1 --node_rank=0 \
         --master_port=12345 \
         autoregressive/sample/sample_c2i.py \
