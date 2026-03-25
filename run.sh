@@ -12,10 +12,12 @@ conda activate llamagen
 # Preprocess the dataset
 python data.py
 
+# Latent code preprocess
 # Here, we do not retrain the VQ-VAE model, we use the pre-trained model vq_ds16_c2i to process the embedding
 # Modify the model path and dataset path in your own path
 bash ./scripts/autoregressive/extract_codes_c2i.sh --vq-ckpt ./pretrained_models/vae/vq_ds16_c2i.pt --data-path ./Datasets/CUB_200_2011/train --code-path ${PROJECT_ROOT}/cub200_code_c2i_flip_ten_crop --ten-crop --crop-range 1.1 --image-size 384
 
+# Training Pipeline
 # 300 epeocbs cost 4 hours using single L40s gpu
 bash scripts/autoregressive/train_c2i_fsdp.sh \
 --cloud_save_path "${PROJECT_ROOT}/saved_model_cub200_single_gpu/" \
@@ -27,6 +29,7 @@ bash scripts/autoregressive/train_c2i_fsdp.sh \
 --no_wandb \
 --epochs 300
 
+# Sampling Process
 # Modify the model path in sample_c2i_class_each_model.sh according to cloud_save_path
 bash scripts/autoregressive/sample_c2i_class_each_model.sh
 
